@@ -1,0 +1,291 @@
+* {
+   font-family: "Raleway", sans-serif;
+   color: #41446e;
+}
+
+body {
+   margin: 0;
+   min-height: 100dvh;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: #b9c6e8;
+}
+
+header {
+   box-sizing: border-box;
+   width: 100%;
+   height: 100px;
+
+   border-bottom: 1px solid #5a5ca8;
+   background: url('header.png');
+   background-position: center;
+   background-size: contain;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+h1 {
+   margin: 0;
+
+   text-align: center;
+   font-size: 68px;
+   color: #41446e;
+}
+
+#start {
+   flex: 1;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+#start h2 {
+   margin: 0;
+   font-size: 42px;
+}
+
+#start h3 {
+   margin: 0;
+   font-size: 36px;
+}
+
+#botones {
+   padding-block: 50px;
+   width: 100%;
+
+   display: none;
+   justify-content: center;
+   align-items: center;
+   gap: 450px;
+}
+
+button {
+   cursor: pointer;
+   height: 60px;
+   width: 450px;
+   margin-top: 30px;
+   border: 2px solid #5a5ca8;
+   padding-block: 28px;
+
+   background-color: #9ca9dd;
+   color: #41446e;
+   font-size: 28px;
+   font-weight: 500;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   transition: 300ms;
+}
+
+button:hover {
+   background-color: #aab5e6;
+}
+
+#bolas-section {
+   margin-block: 80px 50px;
+   width: 100%;
+   
+   display: none;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+#bolas {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 50px;
+}
+
+#ultima-bola {
+   box-sizing: border-box;
+   width: 80px;
+   height: 80px;
+
+   border: 8px solid #5a5ca8;
+
+   font-size: 52px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+#lista-bolas {
+   box-sizing: border-box;
+   width: 320px;
+   border: 2px solid #5a5ca8;
+   background-color: #5a5ca8;
+   
+   display: grid;
+   grid-template-columns: repeat(9, 1fr);
+   gap: 2px;
+}
+
+#lista-bolas div {
+   height: 30px;
+   
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   font-size: 20px;
+   font-weight: 500;
+   background-color: #aab5e6;
+}
+
+#cartones {
+   box-sizing: border-box;
+
+   padding: 40px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 40px 100px;
+}
+
+.carton {
+   position: relative;
+   box-sizing: border-box;
+   height: 300px;
+   width: 800px;
+
+   border: 4px solid #5a5ca8;
+   padding: 8px;
+   padding-bottom: 32px;
+
+   display: grid;
+   place-items: center;
+}
+
+.numeros {
+   box-sizing: border-box;
+   width: 100%;
+   height: 100%;
+
+   border: 1px solid #5a5ca8;
+   gap: 1px;
+   background-color: #5a5ca8;
+
+   display: grid;
+   grid-template-columns: repeat(9, 1fr);
+}
+
+.numero {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   font-size: 36px;
+   font-weight: 500;
+   background-color: #b9c6e8;
+}
+
+.vacio {
+   background-color: #9ca9dd;
+}
+
+.bingo {
+   border-color: #a85a5a;
+}
+.bingo .numeros {
+   border-color: #a85a5a;
+   background-color: #a85a5a;
+}
+.bingo .numero,
+.numero.ganador {
+   background-color: #e8b9b9;
+   color: #d08484;
+   box-shadow: inset 0 0 0 5px #a85a5a;
+}
+.bingo .vacio,
+.vacio.ganador {
+   background-color: #dd9c9c;
+}
+
+.id-carton {
+   position: absolute;
+   bottom: 5px;
+   left: 8px;
+}
+
+.id-carton span {
+   color: #5a5ca8;
+   font-weight: bold;
+   font-size: 20px;
+}
+
+.bingolazos {
+   position: absolute;
+   bottom: 3px;
+   right: 8px;
+
+   color: #5a5ca8;
+   font-weight: bold;
+   font-size: 20px;
+}
+
+.acertado {
+   color: #848dd0;
+   box-shadow: inset 0 0 0 5px #5a5ca8;
+}
+
+#overlay {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   translate: -50% -50%;
+   z-index: 8;
+
+   width: 100%;
+   height: 100%;
+   
+   background: #41446e;
+   opacity: .6;
+   display: none;
+}
+
+#premio-linea,
+#premios {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   translate: -50% -50%;
+   z-index: 9;
+
+   box-sizing: border-box;
+   width: 1200px;
+   max-height: 900px;
+   overflow-y: auto;
+   border: 4px solid #5a5ca8;
+   padding-block: 50px;
+   
+   background-color: #b9c6e8;
+
+   display: none;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+#premios h3,
+#premio-linea h3 {
+   margin: 0;
+   font-size: 42px;
+}
+#premios p,
+#premio-linea p {
+   font-size: 22px;
+}
+
+#recargar {
+   display: none;
+}

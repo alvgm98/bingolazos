@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>BINGOLAZOS</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+</head>
+
+<body>
+   <header>
+      <h1>BINGOLAZOS</h1>
+   </header>
+
+   <section id="start">
+      <h2>BIENVENIDO A BINGOLAZOS</h2>
+      <h3>El bingo donde todos podemos pegar el pelotazo</h3>
+      <button onclick="start()">COMENZAR A JUGAR</button>
+   </section>
+   
+   <section id="botones">
+      <button onclick="generarCarton()">COMPRAR OTRO CARTON</button>
+      <button onclick="startGame()">COMENZAR EL JUEGO</button>
+   </section>
+   
+   <section id="bolas-section">
+      <div id="bolas">
+         <div id="ultima-bola"></div>
+         <div id="lista-bolas"></div>
+      </div>
+      <button id="siguiente-bola" onclick="siguienteBola()">SIGUIENTE BOLA</button>
+      <button id="recargar" onclick="location.reload()">VOLVER A JUGAR</button>
+   </section>
+
+   <section id="cartones">
+
+   </section>
+
+   <!-- MODALES Y OVERLAY -->
+   <div id="overlay" onclick="closeModal()"></div>
+   <section id="premio-linea">
+      <h3>¡HAN CANTADO LINEA!</h3>
+      <p>Ganadores:</p>
+      <div id="premio-linea-cartones"></div>
+      <button onclick="closeModal()">ACEPTAR</button>
+   </section>
+
+   <section id="premios">
+      <h3>¡HAN CANTADO BINGO!</h3>
+      <p>GANADORES DE BINGO:</p>
+      <div id="premio-bingo-cartones"></div>
+      <p>GANADORES DE LINEA:</p>
+      <div id="final-linea-cartones"></div>
+      <button onclick="closeModal()">ACEPTAR</button>
+   </section>
+
+   <script src="main.js"></script>
+</body>
+
+</html>
