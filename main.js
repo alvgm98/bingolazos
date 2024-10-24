@@ -115,7 +115,7 @@ function comprobarBingo() {
 
    if (ganadoresBingo.length > 0) {
       showModalBingo()
-      document.getElementById("recargar").style.display = 'block';
+      document.getElementById("recargar").style.display = 'flex';
       document.getElementById("siguiente-bola").style.display = 'none';
    }
 }
