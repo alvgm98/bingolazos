@@ -359,7 +359,7 @@ button:hover {
    }
 }
 
-@media (width < 420px) {
+@media (width < 450px) {
    #start {
       padding: 0;
    }
