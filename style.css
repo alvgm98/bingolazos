@@ -358,3 +358,38 @@ button:hover {
       width: 425px;
    }
 }
+
+@media (width < 400px) {
+   #start {
+      padding: 0;
+   }
+
+   .carton {
+      height: 132px;
+      width: 300px;
+      padding-bottom: 20px;
+   }
+
+   .acertado {
+      color: #848dd0;
+      box-shadow: inset 0 0 0 2px #5a5ca8;
+   }
+
+   .bingo .numero,
+   .numero.ganador {
+      box-shadow: inset 0 0 0 2px #a85a5a;
+   }
+
+   #lista-bolas {
+      width: 300px;
+   }
+
+   #lista-bolas div {
+      height: 28px;
+   }
+
+   #premio-linea,
+   #premios {
+      width: 320px;
+   }
+}
